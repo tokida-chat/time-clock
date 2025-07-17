@@ -1,0 +1,15 @@
+<html>
+<body style="font-size:20px; color:#333;">
+  <div id="nowTime"></div>
+  <script>
+    // 每秒更新一次时间
+    setInterval(() => { 
+      // 格式：年-月-日 时:分:秒（24小时制，无秒可删 .second ）
+      document.getElementById("nowTime").innerText = new Date().toLocaleString('zh-CN', { 
+        hour12: false, // 24小时制
+        second: true   // 显示秒（想隐藏就改 false）
+      }); 
+    }, 1000); 
+  </script>
+</body>
+</html>
